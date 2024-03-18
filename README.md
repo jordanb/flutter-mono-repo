@@ -3,16 +3,26 @@
 This is an example of a mono repo containing two apps and one shared package.
 The two apps are just an example showing a potential Buyer App alongside a Seller App. Both apps depend on a shared package called `core_widgets`. This is only to showcase how to share code between multiple apps in a mono repo approach.
 
+The link between the app and the shared package happens in the `pubspec.yaml` of each app, see below:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  core_widgets:
+    path: ../core_widgets
+```
+
 ## Run the Buyer App
 
-```
+```sh
 $ cd buyer_app
 $ flutter run
 ```
 
 ## Run the Seller App
 
-```
+```sh
 $ cd seller_app
 $ flutter run
 ```
